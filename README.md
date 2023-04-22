@@ -38,10 +38,46 @@ The basic application function we will need for the server is:
 | Grafana(Docker)           |
 
 ## 2. Get's Started
-### Security
-#### UFW
-#### Let's encrypt
-#### Fail2Ban
+### Basic Security
+For the basic security, we will change the SSH Port, disable root login, and disable password login.
+```
+nano /etc/ssh/sshd_config
+```
+Change the value
+```
+...
+Port 2000
+...
+PermitRootLogin no
+...
+PubkeyAuthentication yes
+...
+PasswordAuthentication no
+...
+```
+- #### UFW
+  1. Install UFW(Example tutorial: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-debian-11-243261243130246d443771547031794d72784e6b36656d4a326e49732e)
+  1. Deny all incoming, allow all outgoing.
+  ```
+  sudo ufw default deny incoming
+  sudo ufw default allow outgoing
+  ```
+  2. Allow ssh port 2000, http and https
+  ```
+  sudo ufw allow 2000
+  sudo ufw allow http
+  sudo ufw allow https
+  ```
+  3. Enable UFW
+  ```
+  sudo ufw enable
+  ```
+  4. Check UFW Status
+  ```
+  sudo ufw status verbose
+  ```
+- #### Let's encrypt
+- #### Fail2Ban
 .
 ### Proxy/Webserver
 #### Nginx
