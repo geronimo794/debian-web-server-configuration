@@ -8,17 +8,17 @@ The basic application function we will need for the server is:
 4. CI/CD Pipeline
 5. Monitoring
 
-### 1. Basic Security
+### 1. Proxy/Webserver
+| Application   |
+| ------------- |
+| Nginx         |
+
+### 2. Basic Security
 | Application   |
 | ------------- |
 | UFW           |
 | Let's encrypt |
 | Fail2Ban      |
-
-### 2. Proxy/Webserver
-| Application   |
-| ------------- |
-| Nginx         |
 
 ### 3. Containerization Application
 | Application   |
