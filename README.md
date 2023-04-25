@@ -2,8 +2,8 @@
 ## 1. Application Information
 Configuration setup for VPS with Debian operating system
 The basic application function we will need for the server is:
-1. Basic security
-2. Proxy/Webserver
+1. Proxy/Webserver
+2. Basic security
 3. Containerization Application
 4. CI/CD Pipeline
 5. Monitoring
