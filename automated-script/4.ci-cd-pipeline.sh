@@ -5,3 +5,4 @@ docker network create jenkins
 
 docker compose up -d --build
 
+docker logs jenkins-blueocean
