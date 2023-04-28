@@ -1,4 +1,4 @@
-# Debian Web Server Configuration
+# Debian Web Server Configuration[ON GOING]
 ## 1. Application Information
 Configuration setup for VPS with Debian operating system
 The basic application function we will need for the server is:
@@ -40,7 +40,9 @@ The basic application function we will need for the server is:
 ## 2. Auto Installation Script
 Make sure you have fresh installation of debian distribution
 ```
-git clone git@github.com:geronimo794/debian-web-server-configuration.git
+sudo apt update
+sudo apt install git -y
+git clone https://github.com/geronimo794/debian-web-server-configuration.git
 cd debian-web-server-configuration
 sudo chmod +x install.sh
 ./install.sh
