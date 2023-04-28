@@ -36,3 +36,12 @@ The basic application function we will need for the server is:
 | Promotheus(Docker)        |
 | Promotheus Node Exporter  |
 | Grafana(Docker)           |
+
+## 2. Auto Installation Script
+Make sure you have fresh installation of debian distribution
+```
+git clone git@github.com:geronimo794/debian-web-server-configuration.git
+cd debian-web-server-configuration
+sudo chmod +x install.sh
+./install.sh
+```
