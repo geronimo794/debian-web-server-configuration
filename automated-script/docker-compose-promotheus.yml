@@ -1,28 +1,13 @@
 version: '3'
-
 services:
-  jenkins-docker:
-    image: docker:dind
-    container_name: jenkins-docker
-    privileged: true
-    environment:
-      - DOCKER_TLS_CERTDIR=/certs
-    volumes:
-      - jenkins-docker-certs:/certs/client
-      - jenkins-data:/var/jenkins_home
-    networks:
-      default:
-        aliases:
-          - docker
+  prometheus:
+    image: prom/prometheus
     ports:
-      - 2376:2376
-    command: --storage-driver overlay2
-
+      - 9090:9090
+    volumes:
+      - prometheus.yml:/etc/prometheus/prometheus.yml
+      
 networks:
   default:
     name: jenkins
     external: true
-
-volumes:
-  jenkins-docker-certs:
-  jenkins-data:
