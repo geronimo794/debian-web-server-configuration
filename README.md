@@ -43,7 +43,7 @@ Make sure you have fresh installation of debian distribution
 sudo apt update
 sudo apt install git -y
 git clone https://github.com/geronimo794/debian-web-server-configuration.git
-cd debian-web-server-configuration
+cd debian-web-server-configuration/automated-script
 sudo chmod +x install.sh
 ./install.sh
 ```
