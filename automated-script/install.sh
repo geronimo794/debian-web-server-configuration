@@ -8,6 +8,8 @@ set +o allexport
 # Update all repository list
 sudo apt update
 
+chmod +x 1.proxy-webserver.sh 2.basic-security.sh 3.containerization-application.sh 4.ci-cd-pipeline.sh 5.monitoring.sh
+
 # Install proxy-webserver
 source ./1.proxy-webserver.sh
 
