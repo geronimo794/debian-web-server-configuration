@@ -20,6 +20,7 @@ services:
 
   jenkins-blueocean:
     image: myjenkins-blueocean:2.387.2-1
+    container_name: jenkins-blueocean
     build:
       context: .
       dockerfile: jenkins.Dockerfile
