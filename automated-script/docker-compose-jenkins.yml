@@ -26,8 +26,8 @@ services:
       dockerfile: jenkins.Dockerfile
     restart: on-failure
     ports:
-      - 8080:8080
-      - 50000:50000
+      - ${PORT_JENKINS}:8080
+      # - 50000:50000
     environment:
       DOCKER_HOST: tcp://docker:2376
       DOCKER_CERT_PATH: /certs/client

@@ -28,9 +28,15 @@ sudo sed -i 's/#PasswordAuthentication no/PasswordAuthentication no/' /etc/ssh/s
 sudo apt-get install -y ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow $PORT_SSH
 sudo ufw allow http
 sudo ufw allow https
+
+# Allow additional port for application
+sudo ufw allow $PORT_SSH
+sudo ufw allow $PORT_JENKINS
+sudo ufw allow $PORT_PROMOTHEUS
+sudo ufw allow $PORT_PROMOTHEUS_NODE_EXPORTER
+sudo ufw allow $PORT_GRAFANA
 
 # Install Let's Encrypt
 sudo apt-get install -y certbot python3-certbot-nginx
