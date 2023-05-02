@@ -38,12 +38,20 @@ The basic application function we will need for the server is:
 | Grafana(Docker)           |
 
 ## 2. Auto Installation Script
-Make sure you have fresh installation of debian distribution
+1. Make sure you have fresh installation of debian distribution
 ```
 sudo apt update
 sudo apt install git -y
 git clone https://github.com/geronimo794/debian-web-server-configuration.git
 cd debian-web-server-configuration/automated-script
+```
+2. Copy and edit your env file your port and domain confugration
+```
+cp format.env .env
+nano .env
+```
+3. Do installation
+```
 sudo chmod +x install.sh
 ./install.sh
 ```

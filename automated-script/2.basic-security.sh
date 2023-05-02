@@ -42,7 +42,7 @@ sudo ufw allow $PORT_GRAFANA
 sudo apt-get install -y certbot python3-certbot-nginx
 
 # Test certbot status
-sudo systemctl status certbot.timer
+# sudo systemctl status certbot.timer
 
 # Install Fail2ban
 sudo apt-get install -y fail2ban
