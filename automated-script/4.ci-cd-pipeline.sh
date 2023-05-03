@@ -14,7 +14,7 @@ sudo docker network create jenkins
 sudo docker compose -f docker-compose-jenkins.yml up -d --build
 
 # Get server ip address
-SERVER_IP_ADDRESS=$(curl ifconfig.me/ipifconfig.me/ip)
+SERVER_IP_ADDRESS=$(curl ifconfig.me)
 
 # Confirmation and setup on browser
 echo 

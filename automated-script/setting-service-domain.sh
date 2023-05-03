@@ -34,6 +34,9 @@ then
 	echo "--------------------------------------------------------------"
 	echo "Your Jenkins now accessible on: https://"$URL_JENKINS
 	echo "--------------------------------------------------------------"
+	# Sleep 10 second to next process
+	echo "Sleep 10 second to the next process"
+	sleep 10s
 fi
 
 # Set promotheus url
@@ -61,6 +64,9 @@ then
 	echo "--------------------------------------------------------------"
 	echo "Your Promotheus now accessible on: https://"$URL_PROMOTHEUS
 	echo "--------------------------------------------------------------"
+	# Sleep 10 second to next process
+	echo "Sleep 10 second to the next process"
+	sleep 10s
 fi
 
 # Set grafana url
@@ -86,7 +92,9 @@ then
 	sudo certbot --nginx -d $URL_GRAFANA
 
 	echo "--------------------------------------------------------------"
-	echo "Your Promotheus now accessible on: https://"$URL_GRAFANA
+	echo "Your Grafana now accessible on: https://"$URL_GRAFANA
 	echo "--------------------------------------------------------------"
-
+	# Sleep 10 second to next process
+	echo "Sleep 10 second to the next process"
+	sleep 10s
 fi
