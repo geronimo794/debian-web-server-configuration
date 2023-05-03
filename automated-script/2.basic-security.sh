@@ -5,7 +5,11 @@ sudo apt-get update
 
 # Load .env file
 set -o allexport
-source .env
+if [ ! -f .env ]; then
+	source format.env
+else
+	source .env
+fi
 set +o allexport
 
 # SSH Port reconfiguration(PERSONAL CONFIGURATION)
