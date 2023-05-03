@@ -7,7 +7,8 @@ services:
       - ${PORT_PROMOTHEUS}:9090
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      
+    restart: unless-stopped
+
 networks:
   default:
     name: jenkins

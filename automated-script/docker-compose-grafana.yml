@@ -5,6 +5,7 @@ services:
     container_name: grafana
     ports:
       - ${PORT_GRAFANA}:3000
+    restart: unless-stopped
 
 networks:
   default:

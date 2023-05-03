@@ -17,6 +17,7 @@ services:
     ports:
       - 2376:2376
     command: --storage-driver overlay2
+    restart: unless-stopped
 
   jenkins-blueocean:
     image: myjenkins-blueocean:2.387.2-1
@@ -24,7 +25,7 @@ services:
     build:
       context: .
       dockerfile: jenkins.Dockerfile
-    restart: on-failure
+    restart: unless-stopped
     ports:
       - ${PORT_JENKINS}:8080
       # - 50000:50000
