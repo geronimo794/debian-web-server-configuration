@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Disable lang forwarding from client to ssh server
+# Optional
+chmod +x disable-lang-forwarding-sshd.sh
+source ./disable-lang-forwarding-sshd.sh
+
 # Load .env file
 set -o allexport
 source .env
