@@ -37,6 +37,9 @@ then
 	# Sleep 10 second to next process
 	echo "Sleep 10 second to the next process"
 	sleep 10s
+
+	# Close previous port
+	sudo ufw delete allow $PORT_JENKINS/tcp
 fi
 
 # Set promotheus url
@@ -67,6 +70,9 @@ then
 	# Sleep 10 second to next process
 	echo "Sleep 10 second to the next process"
 	sleep 10s
+
+	# Close previous port
+	sudo ufw delete allow $PORT_PROMOTHEUS/tcp
 fi
 
 # Set grafana url
@@ -97,4 +103,7 @@ then
 	# Sleep 10 second to next process
 	echo "Sleep 10 second to the next process"
 	sleep 10s
+
+	# Close previous port
+	sudo ufw delete allow $PORT_GRAFANA/tcp
 fi
