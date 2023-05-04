@@ -55,3 +55,9 @@ nano .env
 sudo chmod +x install.sh
 ./install.sh
 ```
+4. (Additional)Add domain and https to Jenkins, Promotheus, and Grafana.
+But first, make sure already set your .env file and your DNS A record.
+```
+sudo chmod +x setting-service-domain.sh
+./setting-service-domain.sh
+```
