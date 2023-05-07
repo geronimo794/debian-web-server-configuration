@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Load .env file
+set -o allexport
+if [ ! -f .env ]; then
+	source format.env
+else
+	source .env
+fi
+set +o allexport
+
+
 # Define version
 VERSION_PROMOTHEUS_NODE_EXPORT="1.5.0"
 
@@ -14,7 +24,7 @@ sudo useradd -g node_exporter --no-create-home --shell /bin/false node_exporter
 
 # Copy node exporter data to system
 sudo mv node_exporter /usr/local/bin/
-sudo chown node_exporter:node_exporter /usr/bin/node_exporter
+sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
 
 # Create system d configuration
@@ -30,7 +40,7 @@ User=node_exporter
 Group=node_exporter
 Type=simple
 Restart=on-failure
-ExecStart=/usr/bin/node_exporter \
+ExecStart=/usr/local/bin/node_exporter \
   --web.listen-address=:'"$PORT_PROMOTHEUS_NODE_EXPORTER"'
 
 [Install]
