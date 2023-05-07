@@ -17,7 +17,5 @@ sudo docker compose -f docker-compose-promotheus.yml up -d --build
 sudo docker compose -f docker-compose-grafana.yml up -d --build
 
 # Install node exporter
-wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
-tar xvfz node_exporter-1.5.0.linux-amd64.tar.gz
-cd node_exporter-1.5.0.linux-amd64
-./node_exporter --web.listen-address=:$PORT_PROMOTHEUS_NODE_EXPORTER
+chmod +x install-promotheus-node-exporter.sh
+source ./install-promotheus-node-exporter.sh
