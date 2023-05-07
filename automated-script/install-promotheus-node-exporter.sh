@@ -40,6 +40,12 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
+
+echo "--------------------------------------------------------------"
+echo "Check prometheus status..."
+echo "Press 'Q' after the status is shown"
+echo "--------------------------------------------------------------"
+
 sudo systemctl status node_exporter
 
 # Enable nginx reverse proxy
