@@ -39,7 +39,6 @@ sudo ufw allow https
 sudo ufw allow $PORT_SSH
 sudo ufw allow $PORT_JENKINS
 sudo ufw allow $PORT_PROMOTHEUS
-sudo ufw allow $PORT_PROMOTHEUS_NODE_EXPORTER
 sudo ufw allow $PORT_GRAFANA
 
 # Install Let's Encrypt
